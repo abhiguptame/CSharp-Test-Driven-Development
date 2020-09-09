@@ -9,8 +9,13 @@ namespace Calculator
         public decimal GetAnnualSalary(decimal hourlyWage)
         {
             decimal annualSalary = hourlyWage * HoursInYear;
-
             return annualSalary;
+        }
+
+        public decimal GetHourlyWage(decimal annualSalary)
+        {
+            decimal hourlyWage = annualSalary / HoursInYear;
+            return hourlyWage;
         }
     }
 }
