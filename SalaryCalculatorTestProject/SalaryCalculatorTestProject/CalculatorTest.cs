@@ -1,6 +1,7 @@
 ﻿using System;
 using Calculator;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 
 namespace SalaryCalculatorTestProject
 {
@@ -32,10 +33,17 @@ namespace SalaryCalculatorTestProject
         public void HourlyWageTest()
         {
             // Arrange 
+            var mock = new Mock<Utils>();
+            mock.Setup(m => m.GetEmployeeTypeValue("Permanent")).Returns(() =>
+            1
+            );
+
+            var salary = mock.Object.GetEmployeeTypeValue("Permanent") == 1 ? 52000 : 50000;
+
             SalaryCalculator sc = new SalaryCalculator();
 
             // Act
-            decimal hourlyWage = sc.GetHourlyWage(52000);
+            decimal hourlyWage = sc.GetHourlyWage(salary);
 
             // Assert
             Assert.AreEqual(25, hourlyWage);
