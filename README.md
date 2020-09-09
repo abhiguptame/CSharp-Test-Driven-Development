@@ -1,5 +1,16 @@
 # C-Sharp-Test-Driven-Development
 
+## Unit Testing: 
+### Tiny testable parts of a program independently tested for expected functionality.
+
+## Test-Driven Development:
+### Process that uses unit tests to drive the design of software.
+
+## Red, Green and Refactor:
+### 1. Red: Creating a test that will fail
+### 2. Green: updating a test to pass
+### 3. Refactor: updating our code to meet coding standard and minimie duplication
+
 ## Testing Tools:
 ### 1. MSTest
 ### 2. NUnit
