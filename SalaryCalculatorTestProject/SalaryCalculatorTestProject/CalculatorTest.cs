@@ -1,4 +1,5 @@
 ﻿using System;
+using Calculator;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SalaryCalculatorTestProject
@@ -12,7 +13,7 @@ namespace SalaryCalculatorTestProject
      */
 
     [TestClass]
-    public class UnitTest1
+    public class CalculatorTest
     {
         [TestMethod]
         public void AnnualSalaryTest()
